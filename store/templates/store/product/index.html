@@ -1,0 +1,43 @@
+{% extends "store/layout/main.html" %}
+
+{% block content %}
+  
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>collectins</h1>
+            <hr>
+            <div class="row">
+               <h1>{{ category }}</h1>
+
+                {% for item in products %}
+                    <div class="col-md-3">
+                        <div class="card">
+                         
+                            <a href="{% url 'productview' item.category.slug item.slug %}">
+
+                                <div class="card-body">
+                                    <div class="category-image">
+                                        <img src="{{ item.product_image.url }}" alt="">
+                                     
+
+                                    </div>
+                                    <h3 class="text-center"> {{ item.name }} </h3>
+                                    <span class="floart-start">{{ item.selling_price | stringformat:'d' }}</span>    
+                                </div>
+                                
+                            </a>
+                        </div>
+                    </div>
+                  
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}
