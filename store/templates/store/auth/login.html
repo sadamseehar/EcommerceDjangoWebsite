@@ -1,0 +1,43 @@
+{% extends "store/layout/main.html" %}
+
+
+
+{% block content %}
+  
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div>
+                <div class="card shadow mt-3">
+                    <div class="card-body">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <div class="text-center">
+                                <h4>Login Page</h4>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label for="">User name</label>
+                                <input type="text" class="form-control" name="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Password</label>
+                                <input type="text" class="form-control" name="password">
+                            </div>
+                            <button type="submit" class="btn btn-success mt-3 justify-content-center">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
+
+
+<div class="blog-read-time-bar -active" data-read-time-bar="blog-page-read-time">
+    <progress class="blog-read-time-bar-indicator" aria-hidden="true" max="100" value="4"></progress>
+</div>
