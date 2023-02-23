@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'Ecom.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'laravel2011c',
+        'NAME': 'hello',
         'USER' : 'root',
         'PASSWORD' : '',
         'HOST' : 'localhost',
